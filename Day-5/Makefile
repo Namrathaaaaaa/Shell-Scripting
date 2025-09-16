@@ -1,5 +1,5 @@
 DOCKER_COMPOSE := docker-compose
-OS := $(shell name)
+OS := $(shell uname)
 
 build:
 	@echo "Running in $(OS)"
@@ -13,4 +13,3 @@ down:
 
 clean:
 	docker system prune -y 
-	
