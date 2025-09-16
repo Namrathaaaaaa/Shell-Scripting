@@ -1,3 +1,5 @@
+.PHONY build up down clean
+
 DOCKER_COMPOSE := docker-compose
 OS := $(shell uname)
 
