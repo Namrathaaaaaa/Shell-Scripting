@@ -5,7 +5,7 @@ build:
 ifeq ($(OS),Linux)
 	@echo "Running in $(OS)"
 	$(DOCKER_COMPOSE) build
-
+endif
 up:
 	$(DOCKER_COMPOSE) up -d 
 
