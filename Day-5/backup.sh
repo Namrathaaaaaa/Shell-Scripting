@@ -30,11 +30,22 @@ function create_backup(){
 
 }
 
-function perform_rotation(){
-        backups=($(ls -t "${backup_dir}/backup_"*.zip 2>/dev/null))
-        echo "${backups[@]}"
+perform_rotation() {
+    backups=($(ls -t "${backup_dir}"/backup_*.zip 2>/dev/null))
 
+    if [[ ${#backups[@]} -gt 5 ]]; then
+        echo "🔄 Performing rotation (keeping last 5 backups)..."
+        
+        # Get backups after the 5 most recent
+        backups_to_remove=("${backups[@]:5}")
+
+        for backup in "${backups_to_remove[@]}"; do
+            rm -f "$backup"
+            echo "🗑️ Deleted old backup: $backup"
+        done
+    fi
 }
+
 
 
 create_backup
