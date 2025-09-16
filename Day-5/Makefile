@@ -6,6 +6,10 @@ ifeq ($(OS),Linux)
 	@echo "Running in $(OS)"
 	$(DOCKER_COMPOSE) build
 endif
+ifeq ($(OS),Windows_NT)
+	@echo "Please add windows commands"
+endif 
+
 up:
 	$(DOCKER_COMPOSE) up -d 
 
