@@ -2,6 +2,7 @@ DOCKER_COMPOSE := docker-compose
 OS := $(shell uname)
 
 build:
+ifeq ($(OS),Linux)
 	@echo "Running in $(OS)"
 	$(DOCKER_COMPOSE) build
 
