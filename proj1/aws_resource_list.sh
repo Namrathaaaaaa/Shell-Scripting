@@ -1,11 +1,10 @@
 #!/bin/bash
 
+#########################################################################################
 # This script will list all the resources in the AWS account 
 # Author: Namratha/Devops
 # version: v0.0.1
 
-
-#########################################################################################
 # Following are the supported AWS services by the script 
 # 1.EC2
 # 2.S3
