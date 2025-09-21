@@ -5,9 +5,11 @@ This project contains shell scripts to list various AWS resources in your accoun
 ## Scripts
 
 ### aws_list.sh
+
 A comprehensive script that lists AWS resources with automatic AWS CLI installation and configuration.
 
-### aws_resource_list.sh  
+### aws_resource_list.sh
+
 A streamlined version that requires pre-installed and configured AWS CLI.
 
 ## Supported AWS Services
@@ -35,6 +37,7 @@ A streamlined version that requires pre-installed and configured AWS CLI.
 ```
 
 ### Example
+
 ```bash
 ./aws_resource_list.sh us-east-1 ec2
 ```
